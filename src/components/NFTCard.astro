@@ -4,7 +4,7 @@
     const { cardImg, viewIcon, title, body, coin, coinIcon, daysLeft, clockIcon, creator, creatorAvatar } = Astro.props
 ---
 
-<article class="w-[327px] md:w-[350px] h-[543px] md:h-[596px] rounded-[15px] bg-very-dark-blue shadow-card p-6 md:pb-8">
+<article class="max-w-[327px] md:max-w-[350px] max-h-[543px] md:max-h-[596px] rounded-[15px] bg-very-dark-blue shadow-card p-6 md:pb-8">
     <div class="w-[278px] md:w-[302px] h-[278px] md:h-[302px] mb-6 relative cursor-pointer">
         <Image src={cardImg} alt="" class="w-full h-full object-cover rounded-lg" />
         <div class="w-full h-full absolute top-0 bg-cyan bg-opacity-[0.503] rounded-lg flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-500">
@@ -18,11 +18,11 @@
 
         <div class="flex items-center justify-between">
             <div class="flex items-center gap-[6.48px]">
-                <Image src={coinIcon} alt="Etherium Icon"/>
+                <Image src={coinIcon} alt=""/>
                 <p class="text-cyan text-[.938rem] md:text-base font-semibold uppercase">{coin}</p>
             </div>
             <div class="flex items-center gap-[7.7px]">
-                <Image src={clockIcon} alt="Clock Icon"/>
+                <Image src={clockIcon} alt=""/>
                 <p class="text-soft-blue text-[.938rem] md:text-base font-normal">{daysLeft + 'days left'}</p>
             </div>
         </div>
@@ -30,7 +30,7 @@
         <div class="border-t border-very-dark-blue-line my-4 md:mt-6"></div>
 
         <div class="flex items-center gap-4">
-            <Image src={creatorAvatar} alt=`Profile Picture of ${creator}` width={33} height={33} class="rounded-[33px] border border-white"/>
+            <Image src={creatorAvatar} alt=`Headshot of ${creator}` width={33} height={33} class="rounded-[33px] border border-white"/>
             <p class="text-soft-blue text-[.938rem] md:text-base font-normal">Creation of <span class="text-white hover:text-cyan transition-colors duration-300 cursor-pointer">{creator}</span></p>
         </div>
     </div>

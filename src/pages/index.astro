@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import avatar from '../images/image-avatar.png'
+import illustration from '../images/image-equilibrium.jpg'
+import viewIcon from '../images/icon-view.svg'
+import coinIcon from '../images/icon-ethereum.svg'
+import clockIcon from '../images/icon-clock.svg'
+import NFTCard from '../components/NFTCard.astro';
+
+const cardInfo = {
+	cardImg: illustration,
+	viewIcon: viewIcon,
+	title : 'Equilibrium #3429',
+	body: 'Our Equilibrium collection promotes balance and calm.',
+	coin: '0.041 ETH',
+	coinIcon: coinIcon,
+	daysLeft: '3',
+	clockIcon: clockIcon,
+	creator: 'Jules Wyvern',
+	creatorAvatar: avatar,
+}
+---
+
+<Layout title="NFT Preview Card">
+	<main class="min-h-screen flex flex-col items-center justify-center">
+		<NFTCard 
+			cardImg={cardInfo.cardImg}
+			viewIcon={cardInfo.viewIcon}
+			title={cardInfo.title}
+			body={cardInfo.body}
+			coin={cardInfo.coin}
+			coinIcon={cardInfo.coinIcon}
+			daysLeft={cardInfo.daysLeft}
+			clockIcon={cardInfo.clockIcon}
+			creator={cardInfo.creator}
+			creatorAvatar={cardInfo.creatorAvatar}
+		/>
+	</main>
+</Layout>
+
